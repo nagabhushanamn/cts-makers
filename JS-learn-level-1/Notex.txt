@@ -1,0 +1,97 @@
+
+
+ref : http://crockford.com/
+
+.js-lang
+
+  --> scripting-lang for web-pages in browser-envi
+  +
+  --> server-side lang on Node.js
+
+  --> mobile appln
+
+  --> desktop-appln
+
+  -->coomand-line tools
+
+-----------------------------------------------------
+
+.js-lang good features
+
+ --> functional pgmming lang | OOP lang
+ --> dynamic data-types & dynamic function bindings
+ --> closure support
+
+ --> Single-Threaded lang , can implement concurrency 
+ --> All IO operation Non-Blocking 
+
+ -----------------------------------------------------
+
+ where/when i shud use .js-lang ?
+
+ on event, to do anything async
+
+-----------------------------------------------------
+
+.js-lang is an implementation 'ECMAScript spec'
+
+latest release: ES6  + ES7 ( some features )
+
+-----------------------------------------------------
+
+
+How to .js programs ?
+
+--> we need .js-runtime
+
+browser-envi
+
+  a. chrome  ==> v8(C++)
+  b. firefox ==> rhino(java)
+  c. IE/Edge ==> chakra
+  d. Safari  ==> Nito
+
+
+other-envi
+
+  a. Node.js ==> v8
+  b. JVM     ==> nashorn
+  c. Apache CouchDB
+
+------------------------------------------------------------         
+
+
+
+  js topics
+  ---------
+
+  1. data types
+  2. Execution-Context / scope
+  3. functions-depth
+  4. Execution-Context's Owner ==> this
+  5. closures
+  6. Inheritance with prototypes
+  7. objects-adv
+  8. concurrent Model with event-loop ( adv )
+  9. JS-modules
+  10. ES6/ES7 new features
+
+  --------------------------------------------
+
+  dev Http-Server
+
+  e.g live-server
+
+  to install live-server
+
+  > node
+
+  > npm
+
+  > npm install live-server -g
+
+  on project directory
+
+  > live-server --port=8080
+
+--------------------------------------------
