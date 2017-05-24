@@ -69,12 +69,13 @@ other-envi
   2. Execution-Context / scope
   3. functions-depth
   4. Execution-Context's Owner ==> this
-  5. closures
+  5. closures ( imp )
   6. Inheritance with prototypes
   7. objects-adv
   8. concurrent Model with event-loop ( adv )
   9. JS-modules
   10. ES6/ES7 new features
+  
 
   --------------------------------------------
 
