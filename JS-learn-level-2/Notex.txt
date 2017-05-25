@@ -1,0 +1,50 @@
+
+
+// ES6 - New features
+-----------------------
+
+A. New-Syntax
+---------------
+
+  a. let & const keywords with block-scope
+  b. function-default params
+  c. rest params
+  d. arrow-functions ( imp )
+  e. destructuring
+  f. spread operator
+  g. string interpolation
+  h. octal & Hex & binary
+  i. obj-literal enhancement
+  j. for-of loop
+  k. iterators & generators
+
+B. New OO concepts
+---------------
+
+  a. class syntax
+
+C. Collections
+-----------------
+
+  a. Set
+  b. Map
+
+D. Async Programming
+---------------------
+  a. Promise API  
+
+
+E. JS module standards  
+----------------------
+  a. ES6 Modules
+
+  
+
+F. New Primitive Type
+--------------------
+  a. Symbol
+
+API Extensions..  
+
+
+

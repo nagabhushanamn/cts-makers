@@ -1,0 +1,53 @@
+
+
+//
+
+till ES5 , 
+
+.js-lang dont have any module-standards & module loaders
+
+
+
+problems with .js programming without any module-standards
+
+ ==> global naming collisions
+ ==> loading dependency modules in order
+
+ -------------------------------------------
+
+ soln : Using Module standards & Loaders 
+
+
+
+ from third-parties
+
+
+    a. AMD ( Async Module Definition )
+    b. commonJS
+    c. UMD
+    ........
+
+from ECAMAScript
+
+    -> ES6 Modules    
+
+
+  -------------------------------------------  
+
+  commonJS module standard
+
+
+  -> every .js file is module by default
+  -> all variables & funtions in .js are private to that module
+  -> to export any public members from module , use "module.exports"
+  -> to import any members , use 'require()'
+  -> we can group related modules into packages with description file ( package.json)
+
+  imp-note : Node.js runtime already implemented this module-standard
+
+
+  popular terms ==> node module & node package 
+
+  NPM ( Node Package Manager )  
+
+
