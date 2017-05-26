@@ -1,0 +1,28 @@
+
+
+
+.js-lang
+
+    --> single-threaded lang , we can implement better concurrency
+    --> all IO operations are non-blocking
+
+    --------------------------------------
+
+
+    browser e.g chrome
+
+
+  1. JS-runtime/engine  ( v8 )  -> based on ECMAScript spec
+
+        a. single-call-stack  ==> where context(s) will get execute
+        b. heap        ==> where objects reside
+
+   2. browser's Web APIs   -> based on w3c standards
+
+        e.g DOM, XHR , Timer , HTML5 APIs 
+
+   3. Event-Queue
+
+   4. Event-Loop     
+
+   --------------------------------------------

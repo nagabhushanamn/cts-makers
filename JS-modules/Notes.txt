@@ -45,9 +45,41 @@ from ECAMAScript
 
   imp-note : Node.js runtime already implemented this module-standard
 
+ also called popularly , Node-Modules & Node Packages
+  
+  --------------------------------------
 
-  popular terms ==> node module & node package 
+  NPM - Node Package Manager
 
-  NPM ( Node Package Manager )  
+    --> CLI tool
+    --> to export/import Node Packages 
+
+
+-----------------------------------------
+
+Tools , to bundle node_modules/node_packages to browser use    
+
+
+ --> browserify
+ --> Webpack   ==> ( Module bundler & Loader )
+
+
+--------------------------------------------
+
+
+    ES6 Module standard
+
+
+  -> every .js file is module by default
+  -> all variables & funtions in .js are private to that module
+  -> to export any public members from module , use "export" keyword
+  -> to import any members , use 'import' keyword
+  
+
+  
+
+
+  
+
 
 

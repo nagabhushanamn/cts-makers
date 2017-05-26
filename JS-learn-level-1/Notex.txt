@@ -96,3 +96,18 @@ other-envi
   > live-server --port=8080
 
 --------------------------------------------
+
+
+Async Programming .js-lang
+
+  by default , on event ,  event-handler execute async
+
+------------------------------------------ 
+
+  without event , how to do async
+
+  1. promise API ( es6 )
+  2. RxJS ( Reactive Extension with JS) API ( proposed to ES7 )
+  3. async & await keywords  ( ES7 )  
+
+------------------------------------------   
