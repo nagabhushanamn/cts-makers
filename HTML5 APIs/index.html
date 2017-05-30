@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./bower_components/jquery-ui/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">
+        product-1
+    </p>
+    <p id="p2" draggable="true" ondragstart="dragstart_handler(event);">
+        product-2
+    </p>
+    <p id="p2" draggable="true" ondragstart="dragstart_handler(event);">
+        product-3
+    </p>
+
+    <div id="target" ondrop="drop_handler(event);" 
+                     ondragover="dragover_handler(event);">
+        Drop Zone
+    </div>
+
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/jquery-ui/jquery-ui.js"></script>
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

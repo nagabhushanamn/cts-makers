@@ -1,0 +1,45 @@
+
+
+
+
+Responsive Web Design
+----------------------
+
+Responsive web design is the practice of building 
+a website suitable to work on every device and every screen size, 
+no matter how large or small, mobile or desktop. 
+
+
+
+4 guide-lines
+--------------
+
+- Flexible Layouts/grids  
+- Media Queries ( new features from css3 )
+- Mobile First approach
+- Flexible Media-content ( images , video )
+
+-------------------------------------------
+
+Flexible Layouts/grids
+
+Responsive Web Design Formula
+
+(target / context) x 100 = result %
+
+e.g
+
+(340/538)*100 = 63.197026%
+
+
+-------------------------------------------
+
+
+RWD F.Ws
+
+
+--> bootstrap  ( most popular )
+--> foundation F.W
+--> semantic UI
+
+-------------------------------------------
