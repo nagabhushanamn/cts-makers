@@ -1,0 +1,19 @@
+
+
+data-binding
+--------------
+
+
+     1. interpolation . ( component --> template )
+
+     2. Property Binding => bind any DOM attribute with dynamic value
+
+         syntax
+
+         <ele [property]=""/>
+
+     3. Event Binding
+
+        syntax
+
+        <ele (event-name)="handler()" />        

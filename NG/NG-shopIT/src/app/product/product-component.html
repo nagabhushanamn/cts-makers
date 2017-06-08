@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col-md-3 col-xs-6">
+        <img [src]="product.images[0].full" class="img-responsive" />
+    </div>
+    <div class="col-md-9 col-xs-6">
+        <span class="badge">{{index+1}}</span>
+        <h3>{{product.name|uppercase}} <small>{{product.makeDate|date:'yyyy'}}</small></h3>
+        <h4>{{product.price|currency:'INR':true}}</h4>
+        <button *ngIf="product.canBuy" class="btn btn-primary">Buy</button>
+        <hr/>
+        <section>
+            <ul class="nav nav-tabs">
+                <li [class.active]="isTabSelected(1)"><a href (click)="changeTab(1,$event)">Description</a></li>
+                <li [class.active]="isTabSelected(2)"><a href (click)="changeTab(2,$event)">Specification</a></li>
+                <li [class.active]="isTabSelected(3)"><a href (click)="changeTab(3,$event)">Reviews</a></li>
+            </ul>
+            <div class="panel" *ngIf="isTabSelected(1)">
+                <p>{{product.description}}</p>
+            </div>
+            <div class="panel" *ngIf="isTabSelected(2)">
+                <p>Not Yet</p>
+            </div>
+            <div class="panel" *ngIf="isTabSelected(3)">
+                <div class="alert alert-info" *ngFor="let review of product.reviews">
+                    <span class="badge">{{review.stars}}</span> &mdash; <span>{{review.author}}</span>
+                    <hr/>    
+                    <p>{{review.comment}}</p>
+                </div>    
+                <hr/>
+
+                <div class="panel panel-primary">
+                        <div class="panel-heading">Review Form</div>
+                        <div class="panel-body">
+                            <form name="reviewForm" >
+                                <div class="form-group" >
+                                    <label>stars</label>
+                                    <input required class="form-control" name="stars"/>
+                                </div>
+                                <div class="form-group" >
+                                    <label>author</label>
+                                    <input required type="email" class="form-control" name="author"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>comment</label>
+                                    <textarea  required cols="35" rows="5" class="form-control" name="comment" ></textarea>
+                                </div>
+                                <button class="btn btn-primary">submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+            </div>
+        </section>
+
+    </div>
+</div>
+<!--<pre>{{product|json}}</pre>-->
