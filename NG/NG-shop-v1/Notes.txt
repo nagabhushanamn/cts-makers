@@ -1,0 +1,30 @@
+
+
+data-binding
+----------------
+
+
+  -> interpolation
+  -> property-binding
+
+      <ele [prop]="value" />
+
+  -> event-binding
+
+      <ele (event-name)="handler()" />    
+
+------------------------------------
+
+
+How to handle Forms
+    -> 2-way data-binding
+    -> Form validation
+
+
+NG -services
+    -> Dependecy Injection
+HTTP service
+
+
+Routing with Guards
+Authentication              

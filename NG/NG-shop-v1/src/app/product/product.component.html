@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-md-3 col-xs-4 col-sm-4">
+        <img [src]="product.images[0].full" class="img-responsive" />
+    </div>
+    <div class="col-md-6 col-xs-8 col-sm-8">
+        <span class="badge">{{index+1}}</span>
+        <h4>{{product.name | uppercase}} <small [innerText]="product.makeDate|date:'yyyy'"></small></h4>
+        <h5>{{product.price | priceDiscount:product.discount | currency:'INR':true}}</h5>
+        <button *ngIf="product.canBuy" class="btn btn-primary">Buy</button>
+
+        <hr/>
+
+        <section>
+            <ul class="nav nav-tabs">
+                <li [class.active]="isTabSelected(1)"><a href (click)="changeTab(1,$event)">Description</a></li>
+                <li [class.active]="isTabSelected(2)"><a href (click)="changeTab(2,$event)">Specification</a></li>
+                <li [class.active]="isTabSelected(3)"><a href (click)="changeTab(3,$event)">Reviews</a></li>
+            </ul>
+            <div class="panel" *ngIf="isTabSelected(1)">
+                <p>{{product.description}}</p>
+            </div>
+            <div class="panel" *ngIf="isTabSelected(2)">
+                <p>Not Yet</p>
+            </div>
+            <div class="panel" *ngIf="isTabSelected(3)">
+                <div class="alert alert-danger" *ngFor="let review of product.reviews">
+                    <span class="badge">{{review.stars}}</span> &mdash; {{review.author}}
+                    <hr/>
+                    <p>{{review.body}}</p>
+                </div>   
+                <hr/>
+                <div class="panel panel-primary">
+                        <div class="panel-heading">Review Form</div>
+                        <div class="panel-body">
+                            <form #myForm name="reviewForm" #reviewForm="ngForm" (submit)="submitNewReview($event,product,reviewForm)">
+                                <div class="form-group" [class.has-error]="stars.invalid && reviewForm.submitted">
+                                    <label>stars</label>
+                                    <input #stars="ngModel" required class="form-control" name="stars" [(ngModel)]="newReview.stars" />
+                                </div>
+                                <div class="form-group" [class.has-error]="author.invalid && reviewForm.submitted">
+                                    <label>author</label>
+                                    <input #author="ngModel" required type="email" class="form-control" name="author" [(ngModel)]="newReview.author"/>
+                                </div>
+                                <div class="form-group" [class.has-error]="comment.invalid && reviewForm.submitted">
+                                    <label>comment</label>
+                                    <textarea #comment="ngModel" required cols="35" rows="5" class="form-control" name="body" [(ngModel)]="newReview.body"></textarea>
+                                </div>
+                                <button class="btn btn-primary">submit</button>
+                                {{reviewForm.submitted}}
+                            </form>
+                        </div>
+                    </div> 
+            </div>
+        </section>
+
+        <!--<pre>{{product|json}}</pre>-->
+
+    </div>
+</div>

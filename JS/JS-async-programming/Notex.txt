@@ -1,0 +1,21 @@
+
+
+
+   by default , on event , in .js-lang every handler executes async
+
+   -------------------------------------
+
+
+   How to do async programming in .js-lang ?
+
+
+   way-1 : Promise API . ( ES6 )
+
+   // ES7 proposals
+   
+   way-2 : Reactive Extension in JS ( RxJS ) API
+   way-3 : using 'async' & 'await' keywords
+
+   -------------------------------------------
+
+

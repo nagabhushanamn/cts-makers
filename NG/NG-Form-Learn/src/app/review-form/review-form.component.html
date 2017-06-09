@@ -1,0 +1,48 @@
+<div class="col-md-6">
+  <form #myForm #reviewForm="ngForm" (submit)="submitReview(reviewForm)">
+    <div class="form-group" [ngClass]="{'has-error':name.invalid && name.touched,'some-class':true}">
+      <label> Name </label>
+      <input autofocus class="form-control" required 
+                                            name="name" 
+                                            #name="ngModel"
+                                            [ngModel]="reviewModel.name" 
+                                            (ngModelChange)="doCaseConversion($event)" />
+      <div class="help-block" *ngIf="name.invalid && name.touched">Name is Required</div>                                      
+    </div>
+    <div class="form-group">
+      <label> Email </label>
+      <input type="email" required class="form-control" name="email" [(ngModel)]="reviewModel.email" />
+    </div>
+    <div class="form-group">
+      <label> Message </label>
+      <textarea class="form-control" name="message" [(ngModel)]="reviewModel.message"></textarea>
+    </div>
+    <button>Submit</button>
+  </form>
+
+  <!--
+  
+  <pre>
+    {{reviewForm.value|json}}
+  </pre>
+
+  <pre>
+    {{reviewModel|json}}
+  </pre>
+  
+  -->
+
+  <pre>
+    {{myForm.className|json}}
+  </pre>
+
+  <pre>
+    {{myForm.name.className|json}}
+  </pre>
+    <pre>
+    {{myForm.email.className|json}}
+  </pre>
+
+
+
+</div>
