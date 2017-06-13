@@ -1,0 +1,90 @@
+<div class="col-md-6 col-sm-8 col-xs-8">
+
+  <form [formGroup]="customerFormGroup">
+    <fieldset>
+      
+      <div class="form-group" [ngClass]="{'has-error':customerFormGroup.get('firstName').touched  
+                                          && !customerFormGroup.controls.firstName.valid }">
+        <label for="firstNameId">First Name</label> 
+        <input id="firstNameId" type="text" 
+              placeholder="First Name (required)"
+              class="form-control"
+              formControlName="firstName"
+              />
+          <div class="help-block">{{firstNameErrorMessage}}</div>
+      </div>
+
+       <div class="form-group" [ngClass]="{'has-error':customerFormGroup.get('email').touched  
+                                          && !customerFormGroup.controls.email.valid }">
+        <label for="">Email</label> 
+        <input id="" type="text" 
+              placeholder="Email (required)"
+              class="form-control"
+              formControlName="email"
+              />
+         <span class="help-block" *ngIf="customerFormGroup.get('email').touched && customerFormGroup.get('email').errors"> 
+         <span *ngIf="customerFormGroup.get('email').errors.required">
+           Enter Email
+         </span>
+        </span>      
+      </div>
+
+      <div class="form-group" [ngClass]="{'has-error':customerFormGroup.get('phone').touched  
+                                          && !customerFormGroup.controls.phone.valid }">
+        <label for="">Phone</label> 
+        <input id="" type="text" 
+              placeholder="Phone"
+              class="form-control"
+              formControlName="phone"
+              />
+         <span class="help-block" *ngIf="customerFormGroup.get('phone').touched && customerFormGroup.get('phone').errors"> 
+         <span *ngIf="customerFormGroup.get('phone').errors.required">
+           Enter Phone
+         </span>
+        </span>      
+      </div>
+
+
+      <div>
+        <label for="">Send Notification</label> 
+        <input id="" type="radio"
+                value="email" 
+                formControlName="notification"
+                (click)="changeNotification('email')"
+              /> Email
+          <input id="" type="radio"
+                value="text" 
+                formControlName="notification"
+                (click)="changeNotification('text')"
+                /> Text
+      </div>
+
+
+        <div class="form-group" [ngClass]="{'has-error':customerFormGroup.get('range').touched  
+                                          && !customerFormGroup.controls.range.valid }">
+        <label for="">Range</label> 
+        <input id="" type="text" 
+              placeholder="Range"
+              class="form-control"
+              formControlName="range"
+              />
+         <span class="help-block" *ngIf="customerFormGroup.get('range').touched 
+                                  && customerFormGroup.get('range').errors"> 
+         <span *ngIf="customerFormGroup.get('range').errors.required">
+           Enter Range
+         </span>
+         <span *ngIf="customerFormGroup.get('range').errors.range">
+           > 0 and <=100
+         </span>
+        </span>      
+      </div>
+
+
+      <hr/>
+
+      <button type="submit">Save</button>
+      <button type="button" (click)="loadCustomer()">Load Customer</button>
+    </fieldset>
+</form>
+
+</div>  

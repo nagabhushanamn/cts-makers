@@ -1,0 +1,7 @@
+
+
+
+with API call
+
+
+ --> create,retreive,update,delete on Product Model

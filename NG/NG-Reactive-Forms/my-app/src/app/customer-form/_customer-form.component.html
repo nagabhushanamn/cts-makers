@@ -1,0 +1,35 @@
+<div class="col-md-6 col-sm-8 col-xs-8">
+
+  <form #customerFormGroup="ngForm">
+    <fieldset>
+      <div class="form-group" [ngClass]="{'has-error': firstNameVar.touched && !firstNameVar.valid }">
+        <label for="firstNameId">First Name</label> 
+        <input id="firstNameId" type="text" 
+              placeholder="First Name (required)"
+              class="form-control"
+              [(ngModel)]="customerModel.firstName"
+              name="firstName"
+              #firstNameVar="ngModel"
+              required minlength="3" />
+        <span class="help-block" *ngIf="firstNameVar.touched && firstNameVar.errors"> 
+         <span *ngIf="firstNameVar.errors.required">
+           Enter FirstName
+         </span>
+         <span *ngIf="firstNameVar.errors.minlength">
+           > 3 chars
+         </span>
+        </span>      
+      </div>
+      <button type="submit">Save</button>
+    </fieldset>
+</form>
+
+  <pre>
+    {{customerFormGroup.value|json}}
+  </pre> 
+
+  <pre>
+    {{customerModel|json}}
+  </pre>  
+
+</div>  

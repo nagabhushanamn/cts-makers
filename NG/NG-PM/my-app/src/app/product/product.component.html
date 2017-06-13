@@ -1,0 +1,15 @@
+<div>
+  <div class="panel panel-default">
+    <div class="panel-heading">{{product.name}} - details </div>
+    <div class="panel-body">
+
+        <div>
+          <h4 [innerText]="product.name"> <span [innerText]="product.makeDate|date"></span></h4>
+          <h5 [innerText]="product.price|currency:'INR':true"></h5>
+          <h4 [innerText]="product.description"></h4>
+        </div>  
+
+    </div>
+  </div>
+  <button class="btn btn-default" (click)="goBack()"> Back </button>
+</div>

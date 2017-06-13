@@ -1,0 +1,18 @@
+<!--
+<p-dataTable [value]="allProducts">
+    <p-column field="name" header="Name"></p-column>
+    <p-column field="price" header="Price"></p-column>
+    <p-column field="makeDate" header="Make-Date"></p-column>
+</p-dataTable>
+-->
+
+<table class="table">
+    <tr *ngFor="let product of allProducts">
+
+        <td><a  href="" [routerLink]="['/products',product.id]">{{product.name}}</a></td>
+        <td>{{product.price|currency:'INR':true}}</td>
+        <td>{{product.makeDate|date}}</td>
+
+    </tr>
+</table>
+

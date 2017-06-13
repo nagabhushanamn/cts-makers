@@ -11,10 +11,20 @@ var appRoutes = [
     },
     {
         path: 'about',
-        loadChildren: 'app/about/about.module#AboutModule'
+        loadChildren: 'app/about/about.module#AboutModule' // Lazy Module Module..
     },
     { path: 'contact', component: contact_component_1.ContactComponent },
     { path: '**', component: not_found_component_1.NotFoundComponent }
 ];
-exports.appRouting = router_1.RouterModule.forRoot(appRoutes);
+// @NgModule({
+//   imports: [
+//     RouterModule.forRoot(appRoutes)
+//   ],
+//   exports: [
+//     RouterModule
+//   ]
+// })
+// export class AppRoutingModule {
+// }
+exports.AppRoutingModule = router_1.RouterModule.forRoot(appRoutes);
 //# sourceMappingURL=app.routing.js.map
